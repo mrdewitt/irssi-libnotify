@@ -49,6 +49,7 @@ class IrssiListener:
                                     'dialog-information')
         # Concatenate messages for certain distros
         n.set_hint_string('x-canonical-append', 'true')
+        n.set_urgency(Notify.Urgency.CRITICAL)
         n.show()
 
         # It would be more kosher to do this with GStreamer, but in
